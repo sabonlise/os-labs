@@ -1,0 +1,87 @@
+    1  sudo apt-get install virtualbox-guest-dkms
+    2  settings
+    3  xrandr -q
+    4  xrandr -s 800x600
+    5  xrandr --mode 800x600
+    6  xrandr --output `xrandr | grep " connected"|cut -f1 -d" "` --mode 800x600
+    7  xrandr --output XWAYLAND0 --mode 800x600
+    8  xrandr --output HDMI-0 --mode 800x600
+    9  ...
+   10  shutdown
+   11  shutdown -t 0
+   12  shutdown -c
+   13  shutdown -h now
+   14  asda
+   15  [200~asda
+   16  sudo usermod -l ryugu cryo
+   17  ps -u cryo
+   18  history | tr -d " "
+   19  history
+   20  sed 's/[0-9]*'
+   21  sed 's/[0-9]*' history
+   22  sed 's/[0-9]*//' history
+   23  history > test.txt
+   24  sed 's/[0-9]*//' history
+   25  sed 's/[0-9]*//' test.txt
+   26  sed 's/^[^0-9]*//' test.txt
+   27  sed 's/^[^0-9]^//' test.txt
+   28  sed 's/^[^0-9].//' test.txt
+   29  sed 's/^[^0-9]//' test.txt
+   30  sed 's/^[^0-9]*//' test.txt
+   31  sed 's/^[^0-9]^*//' test.txt
+   32  sed 's/^ [^0-9]*//' test.txt
+   33  sed 's/* [^0-9]*//' test.txt
+   34  sed 's/[^0-9]*//' test.txt
+   35  sed 's/[^0-9] *//' test.txt
+   36  sed 's/[^0-9] ^//' test.txt
+   37  sed 's/[^0-9]*//' test.txt
+   38  sed 's/[^0-9]/*//' test.txt
+   39  sed 's/[^0-9]//' test.txt
+   40  sed 's/[^0-9]*//' test.txt
+   41  sed 's/[^0-9].*//' test.txt
+   42  sed 's/[^0-9]. //' test.txt
+   43  sed 's/[^ ] //' test.txt
+   44  sed 's/[^ ].*//' test.txt
+   45  sed 's/[^ ] *//' test.txt
+   46  sed 's/[^ ]   *//' test.txt
+   47  sed 's/[^ ]*//' test.txt
+   48  sed 's/[^ ]   *//' test.txt
+   49  sed 's/[^ ]*//' test.txt
+   50  sed 's/[^ ] *//' test.txt
+   51  sed 's/[^ ] *//' test.txt > exx.sh
+   52  xdg-open
+   53  xdg-open .
+   54  history
+   55  pwd
+   56  sed 's/[^ ] *//s/[^ ]//' test.txt
+   57  sed 's/[^ ] *//;s/[^ ]//' test.txt
+   58  sed 's/[^ ] *//;s/[ ]//' test.txt
+   59  sed 's/[^ ] *//;s/[ ]*//' test.txt
+   60  history
+   61  rm test.txt
+   62  rm ex2.sh
+   63  rm exx.sh
+   64  history > ex2.txt
+   65  sed 's/[^ ] *//;s/[ ]*//' ex2.txt > ex2.sh
+   66  history
+   67  cat ex2.sh
+   68  cd week1
+   69  cat ex2.sh
+   70  history > test.txt
+   71  cat test.txt
+   72  sed 's/[^ ]*//;s/[ ]*//' test.tx
+   73  sed 's/[^ ]*//;s/[ ]*//' test.txt
+   74  sed 's/[^ ] *//;s/[ ]*//' test.txt
+   75  sed 's/[0-9]*//;s/[ ]*//' test.txt
+   76  sed 's/[[0-9]]*//;s/[ ]*//' test.txt
+   77  sed 's/[[0-9]*]*//;s/[ ]*//' test.txt
+   78  sed 's/[[0-9]]+\//;s/[ ]*//' test.txt
+   79  sed 's/[[0-9]]+//;s/[ ]*//' test.txt
+   80  sed 's/([[0-9]])+//;s/[ ]*//' test.txt
+   81  sed 's/[[0-9]*]//;s/[ ]*//' test.txt
+   82  sed 's/[[0-9]*] //;s/[ ]*//' test.txt
+   83  sed 's/[[0-9]*]//g;s/[ ]*//' test.txt
+   84  sed 's/[0-9]//g;s/[ ]*//' test.txt
+   85  sed 's/[^a-Z]*//' test.txt
+   86  rm test.txt
+   87  history > ex2.txt
