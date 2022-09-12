@@ -9,8 +9,7 @@ int main()
     while (counter < 256) {
         char c = (char) getchar();
         if (c == '\n' || c == '.') break;
-        string[counter] = c;
-        counter++;
+        string[counter++] = c;
     }
     string[counter] = '"';
     string[counter + 1] = '\0';
