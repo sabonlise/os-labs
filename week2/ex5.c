@@ -4,11 +4,11 @@
 long int tribonacci(int n) {
     long int z = 0, x = 1, c = 1, result;
     
-    for (int i = 0; i < n; i++) {
+    for (int i = 3; i <= n; i++) {
         result = z + x + c;
-        x = z;
-        c = x;
-        z = result;
+        z = x;
+        x = c;
+        c = result;
     }
     
     return result;
