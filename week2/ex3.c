@@ -20,7 +20,7 @@ void fromDecimalToAnotherBase(long long number, int base_to) {
 
 
 void convert(long long int number, long long int base_from, long long int base_to) {
-    if ((base_from < 2) || (base_from > 10) || (base_to < 2) || (base_from > 10)) {
+    if ((base_from < 2) || (base_from > 10) || (base_to < 2) || (base_to > 10)) {
         printf("%s", "cannot convert!");
         exit(0);
     }
