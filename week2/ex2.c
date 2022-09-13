@@ -6,7 +6,7 @@ int main()
     char string[256];
     int counter = 1;
     string[0] = '"';
-    while (counter < 256) {
+    while (counter < 254) {
         char c = (char) getchar();
         if (c == '\n' || c == '.') break;
         string[counter++] = c;
