@@ -24,15 +24,12 @@ float area(Point A, Point B, Point C) {
 
 int main(void) {
 		
-    struct Point A = {2.5, 6};
-    struct Point B = {1, 2.2};
-    struct Point C = {10, 6};
+    	struct Point A = {2.5, 6};
+    	struct Point B = {1, 2.2};
+    	struct Point C = {10, 6};
     
-    
-	float f = distance(A, B);
+    	float f = distance(A, B);
 	printf("A -- B distance is %f\n", f);
-
-
 	float a = area(A, B, C);
 	printf("Area of triangle ABC is %f\n", a);
 
