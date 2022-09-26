@@ -1,43 +1,47 @@
 #include <stdio.h>
+#include <unistd.h>
+#include <time.h>
 #include <stdlib.h>
-#include <string.h>
-
-
-int foo(int age) {
-	int result;
-	
-	result = 2022 - age;
-	
-	return result;
-}
+#include <sys/wait.h>
 
 int main() {
+    clock_t start1, start2, start, stop1, stop2, stop;
+    pid_t child1, child2, parent;
 
-	const int x = 10;
-	int* q = (int*) &x;
-	
-	const int* const p = (const int*) malloc(5 * sizeof(int));
-	int* a = (int *) p;
-	
-	for (int i = 0; i < 5; i++) {
-	    *(a + i) = x;
-	}
+    start = clock();
 
-	for (int i = 0; i < 5; i++) {
-	    printf("[+] Memory addresses of allocated cell #%d: %p\n", i + 1, (a + i));
-	}
-	
-	free(a);
-	
-	for (int i = 0; i < 5; i++) {
-	    printf("[*] Enter age of the %d student: ", i + 1);
-	    fscanf(stdin, "%d", (a + i));
-	}
-	
-	for (int i = 0; i < 5; i++) {
-	    *(a + i) = foo(*(a + i));
-	    printf("[+] Birth year of the %d student is %d\n", i + 1, *(a + i));
-	}
-	
-	return EXIT_SUCCESS;
+    child1 = fork();
+    start1 = clock();
+
+    if (child1 == 0) {
+        wait(NULL);
+        double val = 0;
+        for (int i = 0; i < 100000000; i++) {
+            val += ((double) i / 0xDEADBEEF) * 0xFFFF;
+        }
+        stop1 = clock();
+        printf("child #1 pid: %d, parent pid: %d, proccess required %f seconds\n", getpid(), getppid(), ((float)(stop1 - start1)) / CLOCKS_PER_SEC);
+    } else {
+        child2 = fork();
+        start2 = clock();
+        if (child2 == 0) {
+            wait(NULL);
+            double val = 0;
+            for (int i = 0; i < 100000000; i++) {
+                val += ((double) i / 0xDEADBEEF) * 0xFFFF;
+            }
+            stop2 = clock();
+            printf("child #2 pid: %d, parent pid: %d, proccess required %f seconds\n", getpid(), getppid(), ((float)(stop2 - start2))  / CLOCKS_PER_SEC);
+        } else {
+            wait(NULL);
+            double val = 0;
+            for (int i = 0; i < 133333333; i++) {
+                val += ((double) i / 0xDEADBEEF) * 0xFFFFFFF;
+            }
+            stop = clock();
+            printf("parent pid: %d, parent of the parent pid: %d, proccess required %f seconds\n", getpid(), getppid(), ((float)(stop - start))  / CLOCKS_PER_SEC);
+        }
+    }
+
+    return EXIT_SUCCESS;
 }
