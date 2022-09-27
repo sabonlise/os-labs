@@ -1,14 +1,14 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
+#include <unistd.h>
 
 int main() {
     char command[153];
     scanf("%[^\n]s", command);
-    
-    if (command[strlen(command) - 1] != '&') strcat(command, " &");
-    
-    system(command);
+
+    if (fork() == 0) {
+        system(command);
+    }
 
     return EXIT_SUCCESS;
 }
