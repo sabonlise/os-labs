@@ -1,4 +1,4 @@
 After running program with n = 3, after 1st fork it creates 2 processes (parent and first child), after 2nd fork 4 processes (parent and first child, and two childs of the first child), and 8 processes after 3rd fork (parent, first child, and 2 childs for every next child).
-As you can see, after i-th fork it creates 2^i processes, because they are being created as in binary tree, where each leaf has 2 chidls.
+As you can see, after i-th fork it creates 2^i processes, because they are being created as in binary tree, where each leaf has 2 childs.
 
 Running program with n = 5 confirms it, having 16 processes after 4 forks and 32 processes after 5 forks.
