@@ -1,5 +1,7 @@
 gcc subscriber.c -o subscriber
 gcc publisher.c -o publisher
 
-gnome-terminal -- ./subscriber
+for i in $(seq 1 $1); do
+	gnome-terminal -- ./subscriber "$1"
+done
 ./publisher
