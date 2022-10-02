@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#define MAX_SIZE 1024
 
 
 int main() {
@@ -11,8 +12,8 @@ int main() {
     if (fork() == 0) {
         close(fd[1]);
 
-        char received_message[256];
-        read(fd[0], received_message, sizeof(received_message));
+        char received_message[MAX_SIZE];
+        read(fd[0], received_message, MAX_SIZE);
 
         printf("Received message: %s\n", received_message);
 
@@ -21,7 +22,7 @@ int main() {
 
         close(fd[0]);
 
-        char message[256];
+        char message[MAX_SIZE];
         fscanf(stdin, "%[^\n]", message);
         write(fd[1], message, strlen(message) + 1);
 
