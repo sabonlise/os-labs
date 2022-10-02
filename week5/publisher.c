@@ -13,8 +13,10 @@ int main() {
     char message[MAX_SIZE], *ipc = "/tmp/ex1";
 
     mkfifo(ipc, 0666);
-
-    fd = open(ipc, O_WRONLY | O_NONBLOCK);
+    
+    fd = open(ipc, O_WRONLY);
+    
+    printf("Enter the message you want to publish: ");
     while (fgets(message, MAX_SIZE, stdin) != NULL) {
         printf("Enter the message you want to publish: ");
         write(fd, message, strlen(message) + 1);
