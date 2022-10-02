@@ -21,6 +21,7 @@ int main() {
             printf("Received message: %s\n", received_message);
         }
 
+        close(fd[READ]);
 
     } else {
         printf("Enter the message you want to publish: ");
