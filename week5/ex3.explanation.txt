@@ -1,0 +1,4 @@
+There is a significant growth in program efficiency when there's more than 1 thread. 
+However, the difference between execution time of program using 10 threads and 100 threads is small,
+and that's probably because there's only 6 cores in my CPU, and by using more than 6 threads
+the execution time will change only slightly.
