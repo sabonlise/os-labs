@@ -1,0 +1,24 @@
+time for 1 thread:
+real    0m14.027s
+user    0m14.018s
+sys     0m0.000s
+
+time for 2 threads:
+real    0m5.063s
+user    0m10.056s
+sys     0m0.020s
+
+time for 4 threads:
+real    0m2.660s
+user    0m10.348s
+sys     0m0.142s
+
+time for 10 threads:
+real    0m1.685s
+user    0m9.654s
+sys     0m0.344s
+
+time for 100 threads:
+real    0m1.686s
+user    0m9.524s
+sys     0m0.557s
