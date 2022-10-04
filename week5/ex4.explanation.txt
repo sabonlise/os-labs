@@ -1,0 +1,6 @@
+The timing results in this case are slightly worse than in the previous one, 
+primarily because of the thread synchronization. Also, unlike in the previous exercise,
+threads are not doing ideally equal computations, because some threads might be created
+when another threads already did a lot of computations. This is especially noticable when
+the N variable is not so big, and, as a result, most of the threads get created when calculations
+are already finished or are close to it.
