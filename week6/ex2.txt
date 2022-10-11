@@ -1,0 +1,2 @@
+SJF is better (but not the best in general) than FCFS in terms of average waiting time.
+Also, by Tanenbaum, SJF is optimal only when all jobs are available simultaneously (which is often a thing in Batch Systems)
