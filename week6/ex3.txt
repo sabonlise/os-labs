@@ -1,0 +1,5 @@
+Round Robin produces larger waiting time and response time with comparison to other scheduling algorithms.
+Advantage of this algorithm is that all jobs get equal share of CPU.
+However, setting the quantum too short causes too many process switches and lowers the CPU efficiency, 
+but setting it too long may cause poor response to short interactive requests. A quantum around
+20–50 msec is often a reasonable compromise (from Tannenbaum).
