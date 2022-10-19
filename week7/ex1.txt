@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+   4401	    624	     16	   5041	   13b1	os
