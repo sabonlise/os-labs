@@ -19,6 +19,9 @@ void* __realloc(void *ptr, int new_size) {
         size_t copy_size = old_size < new_size ? old_size : new_size;
         memcpy(new_ptr, ptr, copy_size);
     }
-
-    return new_ptr;
+    
+    ptr = new_ptr;
+    free(new_ptr);
+    
+    return ptr;
 }
