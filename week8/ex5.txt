@@ -1,0 +1,4 @@
+Virtual address is used to refer to the actual physical address, because physical address cannot be accessed directly.
+While physical address is the actual location in memory, virtual address does not exist in memory.
+Virtual address is needed to make each process run independently of each other (without corrupting memory), 
+also it can handle more memory than it actually is in the system.
