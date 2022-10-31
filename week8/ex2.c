@@ -15,5 +15,7 @@ int main() {
         printf("Allocating 10 MB of space\n");
         sleep(1);
     }
+    // According to top command, out of 16 running tasks, 12 is sleeping, 3 are stopped and 1 is running
+    // All tasks are displayed with their appropriate pid and user who initiated them
     return EXIT_SUCCESS;
 }
