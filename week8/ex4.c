@@ -10,7 +10,7 @@ int main() {
 
     int seconds = 0;
     size_t size = 1024 * 1024 * 10;
-    while (seconds++ != 5) {
+    while (seconds++ != 10) {
         int *p = malloc(size);
         memset(p, 0, size);
         getrusage(RUSAGE_SELF, &r_usage);
