@@ -1,0 +1,4 @@
+8 KB = 8 * 1024 bytes = 2^13 bytes => offset is 13 bits
+That mean that the number of entries in a single-level linear page table will be 2^16/2^13 = 2^3 = 8.
+
+Answer: 8.
