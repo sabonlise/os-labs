@@ -7,7 +7,7 @@
 int main() {
     int seconds = 0;
     size_t size = 1024 * 1024 * 10;
-    while (seconds++ != 5) {
+    while (seconds++ != 10) {
         int *p = malloc(size);
         // si and so fields are all zeros because (probably) 10 MB 
         // is not enough to be loaded on disk
