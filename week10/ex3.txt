@@ -1,0 +1,6 @@
+>> What does 660 mean for ex3.txt?
+Owner can write and read this file, while group members can write and read
+>> What does 775 mean for ex3.txt?
+Owner can do everything to this	file, others can read and execute
+>> What does 777 mean for ex3.txt?
+Everyone can do rwx to this file
